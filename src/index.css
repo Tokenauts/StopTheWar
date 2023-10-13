@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Using the html element */
+html {
+  background-color: #f1ece0; /* Replace with your desired color */
+}
+
+/* Alternatively, using the body element */
+body {
+  background-color: #f1ece0; /* Replace with your desired color */
+  margin: 0; /* This ensures there's no margin around the body */
+  min-height: 100vh; /* This ensures the background covers the full viewport height */
+}
+
+@keyframes rollIn3D {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+.roll-in-3d {
+  animation: rollIn3D 0.7s forwards;
+}
